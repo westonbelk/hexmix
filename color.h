@@ -1,6 +1,8 @@
 #ifndef COLOR_H
 #define COLOR_H
 
+#include <iostream>
+
 class color {
     unsigned char r;
     unsigned char g;
@@ -10,7 +12,7 @@ public:
     color(unsigned char, unsigned char, unsigned char);
     color mix(color, double);
     color mix(color);
-    void print();
+    friend std::ostream& operator<<(std::ostream& os, const color& c);
 };
 
 #endif

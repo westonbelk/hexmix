@@ -63,14 +63,13 @@ color color::mix(color color2) {
 }
 
 /*
- * Print the hexadecimal representation
- * of the color to the screen.
+ * Sends current hex code of color to the outpout stream
  */
-void color::print() {
+std::ostream& operator<<(std::ostream& os, const color& c) {
     using namespace std;
-    cout << "#";
-    cout << setfill('0') << setw(2) << hex << static_cast<unsigned>(r);
-    cout << setfill('0') << setw(2) << hex << static_cast<unsigned>(g);
-    cout << setfill('0') << setw(2) << hex << static_cast<unsigned>(b);
-    cout << endl;
+    os << "#";
+    os << setfill('0') << setw(2) << hex << static_cast<unsigned>(c.r);
+    os << setfill('0') << setw(2) << hex << static_cast<unsigned>(c.g);
+    os << setfill('0') << setw(2) << hex << static_cast<unsigned>(c.b);
+    return os;
 }

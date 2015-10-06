@@ -9,7 +9,14 @@ int main() {
 
     // expected output is #fafafa
     color mixed = color1.mix(color2);
-    mixed.print();
+
+    cout << "============================" << endl;
+    cout << "The first color is " << color1 << endl;
+    cout << "The second color is " << color2 << endl;
+    cout << "============================" << endl;
+    cout << endl;
+
+    cout << "The mixed color is " << mixed << endl << endl;
 
     return 0;
 }
