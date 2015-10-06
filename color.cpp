@@ -3,12 +3,29 @@
 #include <iostream>
 #include <iomanip>
 
+/*
+ * || Constructor ||
+ * Intializes a color object with all zeros.
+ * This creates a color of black and a hex
+ * code of #000000.
+ */
 color::color() {
     r = 0;
     g = 0;
     b = 0;
 }
 
+/*
+ * || Constructor ||
+ * Initializes a color object with the given
+ * rgb color values. 
+ * param: unsigned char red
+    Amount of red [0-255]
+ * param: unsigned char green
+    Amount of green [0-255]
+ * param: unsigned char blue
+    Amount of blue [0-255]
+ */
 color::color(unsigned char red, unsigned char green, unsigned char blue) {
     r = red;
     g = green;
@@ -36,8 +53,10 @@ color color::mix(color color2, double amount) {
 }
 
 /*
+ * Mixes two colors in equal proportions.
  * param: color color2
- *  
+    The color to be mixed with
+ * returns: the mixed color
  */
 color color::mix(color color2) {
     return mix(color2, 0.5);

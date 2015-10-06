@@ -6,7 +6,7 @@ class color {
     unsigned char g;
     unsigned char b;
 public:
-    color(); // #000000 black
+    color(); // intializes with #000000 black
     color(unsigned char, unsigned char, unsigned char);
     color mix(color, double);
     color mix(color);
