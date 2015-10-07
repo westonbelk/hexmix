@@ -1,11 +1,10 @@
 #include "color.h"
 #include <assert.h>
-#include <iostream>
 #include <iomanip>
 
 /*
  * || Constructor ||
- * Intializes a color object with all zeros.
+ * Initializes a color object with all zeros.
  * This creates a color of black and a hex
  * code of #000000.
  */
