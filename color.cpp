@@ -32,6 +32,18 @@ color::color(unsigned char red, unsigned char green, unsigned char blue) {
     b = blue;
 }
 
+/*
+ * || Constructor ||
+ * Initializes a color object given a six digit hex code.
+ * If an 8 digit hex code is given, the alpha channel is ignored.
+ * param: uint32_t hex_color_code
+ *  0xRRGGBB
+ */
+color::color(uint32_t number) {
+    r = (number % 0x1000000)/0x10000;
+    g = (number % 0x10000)/0x100;
+    b = (number % 0x100);
+}
 
 /* param: color color2
  *  This is the other color or the color that is being
