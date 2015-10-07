@@ -2,6 +2,7 @@
 #define COLOR_H
 
 #include <iostream>
+#include <stdint.h>
 
 class color {
     unsigned char r;
