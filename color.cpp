@@ -57,9 +57,9 @@ color::color(uint32_t number) {
 color color::mix(color color2, double amount) {
     assert(amount >= 0 && amount <= 1);
 
-    unsigned char mixed_red = (color2.r + r)*amount;
-    unsigned char mixed_green = (color2.g + g)*amount;
-    unsigned char mixed_blue = (color2.b + b)*amount;
+    unsigned char mixed_red = (r * (1-amount)) + (color2.r * amount);
+    unsigned char mixed_green = (g * (1-amount)) + (color2.g * amount);
+    unsigned char mixed_blue = (b * (1-amount)) + (color2.b * amount);
 
     return color(mixed_red, mixed_green, mixed_blue);
 }
