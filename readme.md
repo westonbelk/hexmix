@@ -15,9 +15,9 @@ Usage
 -----
 Usage:
 
-    hexmix <#color1> <#color2>
+    hexmix <color1> <color2>
 
-    hexmix <#color1> <#color2> [--amount] <percent color2>
+    hexmix <color1> <color2> [--amount] <percent color2>
 
 
 Options:
