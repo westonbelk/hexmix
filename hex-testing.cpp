@@ -1,7 +1,16 @@
 #include "color.h"
 #include <iostream>
+#include <stdint.h>
 
 using namespace std;
+
+int splitt(uint32_t number) {
+    for (uint32_t i = 0x1000000; i > 0; i/=0x100) {
+        cout << (number % i) << endl;
+    }
+    cout << "#" << number << endl;
+    return 0;
+}
 
 int main() {
     color color1 = color(0xff, 0xff, 0xff);
@@ -18,5 +27,8 @@ int main() {
 
     cout << "The mixed color is " << mixed << endl << endl;
 
+    cout << "Time to split." << endl;
+
+    splitt(0xABCDEF);
     return 0;
 }
