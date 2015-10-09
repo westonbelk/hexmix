@@ -1,19 +1,31 @@
 #include "color.h"
 #include <stdlib.h>
 #include <getopt.h>
+using namespace std;
+
+
+
+#define hexmix_VERSION_MAJOR '0'
+#define hexmix_VERSION_MINOR '1'
+
+const char version[] = {hexmix_VERSION_MAJOR, '.', hexmix_VERSION_MINOR};
+
+
 
 void display_help_text() {
-    using namespace std;
     cout << "Help text: show this screen" << endl;
 }
 
-void display_version() {
-    using namespace std;
-    cout << "Version 0.0.0" << endl;
+void display_version_text() {
+    cout << "hexmix " << version << endl;
+    cout << "Copyright (C) 2015 Weston Belk" << endl;
+    cout << "License GPLv3+; GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>." << endl;
+    cout << "This is free software: you are free to change and redistribute it." << endl;
+    cout << "There is NO WARRANTY, to the extent permitted by law." << endl << endl;
+    cout << "Written by Weston Belk <contact@westonbelk.com>" << endl;
 }
 
 int main(int argc, char* argv[]) {
-
     // Default value of amount
     // If the -a, --amount flag is given, this is
     // overridden by that value.
@@ -27,13 +39,10 @@ int main(int argc, char* argv[]) {
                 display_help_text();
                 exit(EXIT_SUCCESS);
             case 'v':
-                display_version();
+                display_version_text();
                 exit(EXIT_SUCCESS);
             case 'a':
                 amount = atof(optarg);
-                break;
-            case '?':
-                std::cout << "unknown option given: -" << optopt << std::endl;
                 break;
             default:
                 break;
@@ -42,7 +51,8 @@ int main(int argc, char* argv[]) {
 
     // Make sure the two required arguments are present.
     if (argv[optind] == NULL || argv[optind + 1] == NULL) {
-        std::cout << "Mandatory argument(s) missing\n" << std::endl;
+        cout << "Mandatory argument(s) missing." << endl
+            << "'hexmix -h' for help text and 'man hexmix' for docs." << endl;
         exit(1);
     }
 
@@ -52,8 +62,8 @@ int main(int argc, char* argv[]) {
     color color2 = color(strtoul(argv[optind], NULL, 16));
 
     // Produce output.
-    std::cout << color1 << " and " << color2 << " mix to make "
-                << color1.mix(color2, amount) << std::endl;
+    cout << color1 << " and " << color2 << " mix to make "
+                << color1.mix(color2, amount) << endl;
 
     return 0;
 }
