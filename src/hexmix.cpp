@@ -5,7 +5,7 @@ using namespace std;
 
 
 #define hexmix_VERSION_MAJOR '0'
-#define hexmix_VERSION_MINOR '1'
+#define hexmix_VERSION_MINOR '2'
 
 const char version[] = {hexmix_VERSION_MAJOR, '.', hexmix_VERSION_MINOR};
 
@@ -25,7 +25,7 @@ void display_help_text() {
 void display_version_text() {
     cout << "hexmix " << version << endl;
     cout << "Copyright (C) 2015 Weston Belk" << endl;
-    cout << "License GPLv3+; GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>." << endl;
+    cout << "License GPLv2; GNU GPL version 2 or later <http://gnu.org/licenses/gpl.html>." << endl;
     cout << "This is free software: you are free to change and redistribute it." << endl;
     cout << "There is NO WARRANTY, to the extent permitted by law." << endl;
     cout << "Written by Weston Belk <contact@westonbelk.com>" << endl;
