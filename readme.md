@@ -24,6 +24,6 @@ Options:
 
     -h --help   Show this screen.
 
-    --version   Show version.
+    -v --version   Show version.
 
     -a --amount Amount of color2 to add to color1 from 0 to 1 inclusive [default: 0.5]
