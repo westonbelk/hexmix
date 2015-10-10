@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <stdlib.h>
 
+
 /*
  * || Constructor ||
  * Initializes a color object with all zeros.
@@ -13,6 +14,7 @@ color::color() {
     g = 0x00;
     b = 0x00;
 }
+
 
 /*
  * || Constructor ||
@@ -31,6 +33,7 @@ color::color(unsigned char red, unsigned char green, unsigned char blue) {
     b = blue;
 }
 
+
 /*
  * || Constructor ||
  * Initializes a color object given a six digit hex code.
@@ -43,6 +46,7 @@ color::color(uint32_t number) {
     g = (number % 0x10000)/0x100;
     b = (number % 0x100);
 }
+
 
 /* param: color color2
  *  This is the other color or the color that is being
@@ -67,15 +71,6 @@ color color::mix(color color2, double amount) {
     return color(mixed_red, mixed_green, mixed_blue);
 }
 
-/*
- * Mixes two colors in equal proportions.
- * param: color color2
-    The color to be mixed with
- * returns: the mixed color
- */
-color color::mix(color color2) {
-    return mix(color2, 0.5);
-}
 
 /*
  * Sends current hex code of color to the outpout stream
