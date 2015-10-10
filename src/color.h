@@ -9,7 +9,7 @@ class color {
     unsigned char g;
     unsigned char b;
 public:
-    color(); // intializes with #000000 black
+    color(); // initializes with #000000 black
     color(unsigned char, unsigned char, unsigned char);
     color(uint32_t number);
     color mix(color, double);

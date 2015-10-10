@@ -4,16 +4,22 @@
 using namespace std;
 
 
-
 #define hexmix_VERSION_MAJOR '0'
 #define hexmix_VERSION_MINOR '1'
 
 const char version[] = {hexmix_VERSION_MAJOR, '.', hexmix_VERSION_MINOR};
 
 
-
 void display_help_text() {
-    cout << "Help text: show this screen" << endl;
+    cout << " Usage " << endl;
+    cout << "=======" << endl;
+    cout << "hexmix <color1> <color2>" << endl;
+    cout << "hexmix <color1> <color2> [--amount] <percent color2>" << endl << endl;
+    cout << " Options " <<endl;
+    cout << "=========" << endl;
+    cout << "-h, --help\tShow this screen." << endl;
+    cout << "-v, --version\tDisplay version and author information." << endl;
+    cout << "-a, --amount\tAmount of color2 to add to color1 from 0 to 1 inclusive. [default 0.5]" << endl;
 }
 
 void display_version_text() {
@@ -21,7 +27,7 @@ void display_version_text() {
     cout << "Copyright (C) 2015 Weston Belk" << endl;
     cout << "License GPLv3+; GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>." << endl;
     cout << "This is free software: you are free to change and redistribute it." << endl;
-    cout << "There is NO WARRANTY, to the extent permitted by law." << endl << endl;
+    cout << "There is NO WARRANTY, to the extent permitted by law." << endl;
     cout << "Written by Weston Belk <contact@westonbelk.com>" << endl;
 }
 
@@ -52,7 +58,7 @@ int main(int argc, char* argv[]) {
     // Make sure the two required arguments are present.
     if (argv[optind] == NULL || argv[optind + 1] == NULL) {
         cout << "Mandatory argument(s) missing." << endl
-            << "'hexmix -h' for help text and 'man hexmix' for docs." << endl;
+            << "Run 'hexmix -h' for help text and 'man hexmix' for docs." << endl;
         exit(1);
     }
 

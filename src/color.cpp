@@ -1,6 +1,6 @@
 #include "color.h"
-#include <assert.h>
 #include <iomanip>
+#include <stdlib.h>
 
 /*
  * || Constructor ||
@@ -54,7 +54,11 @@ color::color(uint32_t number) {
  *  The mixed color.
  */
 color color::mix(color color2, double amount) {
-    assert(amount >= 0 && amount <= 1);
+    if(amount < 0 || amount > 1) {
+        std::cerr << "Amount of " << color2
+            << " (color2) must be between 0 and 1 inclusive. " << std::endl;
+        exit(EXIT_FAILURE);
+    }
 
     unsigned char mixed_red = (r * (1-amount)) + (color2.r * amount);
     unsigned char mixed_green = (g * (1-amount)) + (color2.g * amount);
