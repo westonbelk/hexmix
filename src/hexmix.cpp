@@ -14,7 +14,7 @@ void display_help_text() {
     cout << " Usage " << endl;
     cout << "=======" << endl;
     cout << "hexmix <color1> <color2>" << endl;
-    cout << "hexmix <color1> <color2> [--amount] <percent color2>" << endl << endl;
+    cout << "hexmix <color1> <color2> [-a] <percent color2>" << endl << endl;
     cout << " Options " <<endl;
     cout << "=========" << endl;
     cout << "-h\tDisplay this help screen." << endl;
