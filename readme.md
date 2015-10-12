@@ -22,8 +22,8 @@ Usage:
 
 Options:
 
-    -h --help   Show this screen.
+    -h  Display help
 
-    -v --version   Show version.
+    -v  Display version and author information
 
-    -a --amount Amount of color2 to add to color1 from 0 to 1 inclusive [default: 0.5]
+    -a  Amount of color2 to add to color1 from 0 to 1 inclusive [default: 0.5]

@@ -17,9 +17,9 @@ void display_help_text() {
     cout << "hexmix <color1> <color2> [--amount] <percent color2>" << endl << endl;
     cout << " Options " <<endl;
     cout << "=========" << endl;
-    cout << "-h, --help\tShow this screen." << endl;
-    cout << "-v, --version\tDisplay version and author information." << endl;
-    cout << "-a, --amount\tAmount of color2 to add to color1 from 0 to 1 inclusive. [default 0.5]" << endl;
+    cout << "-h\tDisplay this help screen." << endl;
+    cout << "-v\tDisplay version and author information." << endl;
+    cout << "-a\tAmount of color2 to add to color1 from 0 to 1 inclusive. [default 0.5]" << endl;
 }
 
 void display_version_text() {
